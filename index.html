@@ -1,10 +1,362 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My GitHub Website</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my new website hosted on GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizarre Portfolio</title>
+  
+  <!-- Anime/Manga Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Cinzel:wght@700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Global Styles */
+    :root {
+      --jojo-gold: #FFD700;
+      --jojo-purple: #8A2BE2;
+      --jojo-magenta: #C71585;
+      --jojo-cyan: #00FFFF;
+      --manga-black: #0d0d0d;
+      --manga-white: #f4f4f0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--manga-black);
+      color: var(--manga-white);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      /* Subtle Manga Halftone Dot Background Pattern */
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    /* Floating Menacing (ゴゴゴ) Background Effect */
+    .menacing-kanji {
+      position: fixed;
+      font-family: 'Bangers', cursive;
+      color: var(--jojo-purple);
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      font-size: 3.5rem;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      opacity: 0.25;
+      animation: menacingFloat 3s infinite ease-in-out;
+    }
+
+    @keyframes menacingFloat {
+      0%, 100% { transform: translateY(0px) rotate(-8deg) scale(1); opacity: 0.2; }
+      50% { transform: translateY(-15px) rotate(-12deg) scale(1.1); opacity: 0.4; }
+    }
+
+    .kanji-1 { top: 15%; left: 5%; animation-delay: 0s; }
+    .kanji-2 { top: 60%; right: 6%; animation-delay: 1s; color: var(--jojo-magenta); }
+    .kanji-3 { top: 80%; left: 8%; animation-delay: 2s; color: var(--jojo-gold); }
+
+    /* Hero Section */
+    #hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      color: var(--jojo-gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 4px 4px 0px #000, 0 0 20px rgba(255, 215, 0, 0.4);
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Bangers', cursive;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--jojo-cyan);
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0 #000;
+      margin-bottom: 40px;
+    }
+
+    /* Stand Arrow Navigation Links */
+    .arrow-nav {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
+    }
+
+    .arrow-btn {
+      text-decoration: none;
+      color: var(--jojo-gold);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #1f1f1f 0%, #111 100%);
+      border: 3px solid var(--jojo-gold);
+      clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%); /* Arrowhead Shape */
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .arrow-btn:hover {
+      color: #fff;
+      background: var(--jojo-purple);
+      border-color: var(--jojo-cyan);
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 0 20px var(--jojo-purple), 0 0 30px var(--jojo-cyan);
+    }
+
+    /* Content Sections / Manga Panels */
+    .content-section {
+      min-height: 100vh;
+      padding: 80px 10%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .manga-panel {
+      background: rgba(20, 20, 20, 0.95);
+      border: 4px solid var(--manga-white);
+      box-shadow: 12px 12px 0px var(--jojo-purple);
+      padding: 40px;
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      border-bottom: 3px solid var(--jojo-gold);
+      padding-bottom: 10px;
+    }
+
+    .stand-name {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--jojo-gold);
+      text-transform: uppercase;
+      text-shadow: 2px 2px 0 #000;
+      margin: 0;
+    }
+
+    .ability-tag {
+      font-family: 'Bangers', cursive;
+      background: var(--jojo-magenta);
+      color: #fff;
+      padding: 4px 12px;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      transform: rotate(-3deg);
+    }
+
+    /* Panel Grid Layout */
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .panel-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Stand Visual Frame */
+    .stand-card {
+      aspect-ratio: 1/1;
+      border: 3px solid var(--jojo-gold);
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 30px rgba(138, 43, 226, 0.5);
+    }
+
+    .stand-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(110%) brightness(95%);
+    }
+
+    .stand-card-placeholder {
+      font-family: 'Bangers', cursive;
+      font-size: 1.8rem;
+      color: var(--jojo-cyan);
+      text-shadow: 2px 2px 0 #000;
+      padding: 20px;
+    }
+
+    .panel-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .panel-text h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--jojo-cyan);
+      margin-top: 0;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-badge {
+      background: #111;
+      border: 2px solid var(--jojo-gold);
+      color: var(--manga-white);
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Background Elements -->
+  <div class="menacing-kanji kanji-1">ゴゴゴ</div>
+  <div class="menacing-kanji kanji-2">ゴゴゴ</div>
+  <div class="menacing-kanji kanji-3">ゴゴゴ</div>
+
+  <!-- Hero Section -->
+  <header id="hero">
+    <h1 class="hero-title">Faysal Kasim</h1>
+    <p class="hero-subtitle">Mechanical Engineer & Hardware Developer</p>
+    
+    <!-- Stand Arrow Links -->
+    <nav class="arrow-nav">
+      <a href="#about" class="arrow-btn">🏹 About Me</a>
+      <a href="#projects" class="arrow-btn">🏹 Projects</a>
+      <a href="#experience" class="arrow-btn">🏹 Experience</a>
+      <a href="#skills" class="arrow-btn">🏹 Arsenal</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="content-section">
+    <div class="manga-panel">
+      <div class="section-header">
+        <h2 class="stand-name">Star Platinum</h2>
+        <span class="ability-tag">Precision & Engineering</span>
+      </div>
+      <div class="panel-grid">
+        <div class="stand-card">
+          <div class="stand-card-placeholder">[ Star Platinum Visual ]</div>
+        </div>
+        <div class="panel-text">
+          <h3>High-Precision Systems Design</h3>
+          <p>Like Star Platinum's unmatched precision and speed, my focus lies in thermal-fluid systems, rapid 3D prototyping, CAD modeling in SolidWorks, and embedded microcontrollers.</p>
+          <p>Currently studying Mechanical Engineering at Georgia Tech, specializing in thermal and energy systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="content-section">
+    <div class="manga-panel">
+      <div class="section-header">
+        <h2 class="stand-name">Gold Experience</h2>
+        <span class="ability-tag">Creation & Hardware</span>
+      </div>
+      <div class="panel-grid">
+        <div class="stand-card">
+          <div class="stand-card-placeholder">[ Gold Experience Visual ]</div>
+        </div>
+        <div class="panel-text">
+          <h3>Featured Stand Abilities (Projects)</h3>
+          <p><strong>Thermochemical Test Bench:</strong> Engineered custom T-frame fixtures, 3D-printed sensor mounts, and electrical enclosures for experimental hardware.</p>
+          <p><strong>Combat Robotics (3lb Bot):</strong> Designed integrated mechanical structures, custom drivetrains, and electronics for competitive combat robotics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="content-section">
+    <div class="manga-panel">
+      <div class="section-header">
+        <h2 class="stand-name">Silver Chariot</h2>
+        <span class="ability-tag">Speed & Execution</span>
+      </div>
+      <div class="panel-grid">
+        <div class="stand-card">
+          <div class="stand-card-placeholder">[ Silver Chariot Visual ]</div>
+        </div>
+        <div class="panel-text">
+          <h3>Research & Leadership</h3>
+          <p><strong>Engineering Research Assistant</strong> — Designed test bench components, sensor housings, and hardware fixtures using SolidWorks and additive manufacturing.</p>
+          <p><strong>GT BattleBots Design Team</strong> — Hands-on mechanical integration, CAD design, and rapid prototyping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="content-section">
+    <div class="manga-panel">
+      <div class="section-header">
+        <h2 class="stand-name">Weather Report</h2>
+        <span class="ability-tag">Technical Control</span>
+      </div>
+      <div class="panel-grid">
+        <div class="stand-card">
+          <div class="stand-card-placeholder">[ Weather Report Visual ]</div>
+        </div>
+        <div class="panel-text">
+          <h3>Technical Toolkit</h3>
+          <div class="skill-list">
+            <span class="skill-badge">SolidWorks CAD</span>
+            <span class="skill-badge">3D Printing</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C / C++</span>
+            <span class="skill-badge">MATLAB</span>
+            <span class="skill-badge">ESP32 & Arduino</span>
+            <span class="skill-badge">Thermal-Fluid Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
