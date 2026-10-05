@@ -37,9 +37,9 @@ This version uses blended color profiles and decorative motifs, with no Stand ch
 - index.html: page content and project cards
 - style.css: responsive layout, blended backgrounds, and visual effects
 - projects.js: editable project detail data
+- contact.js: your email, LinkedIn URL, and optional phone number
 - script.js: navigation effects, weather controls, and project windows
 - assets/projects/: your real project photos
-- assets/jojo-cast.webp: supplied reference artwork used on the opening screen
 - assets/stand-arrow.png: supplied ornate Stand Arrow asset
 
 ## Preview
@@ -48,8 +48,24 @@ Double-click index.html to view locally. Everything uses relative paths so it wo
 
 ## Artwork
 
-The opening-screen cast and arrow assets were adapted from your supplied references. JoJo's Bizarre Adventure and its characters belong to their respective creators.
+The arrow asset was adapted from your supplied reference. The homepage uses abstract CSS artwork. JoJo's Bizarre Adventure and its characters belong to their respective creators.
 
 ## Validation
 
 JavaScript syntax and local asset references were checked. Rendered browser layout was not verified in this environment.
+
+## Add your contacts
+
+Edit contact.js and enter your email and full LinkedIn URL between the empty quotes. You can leave phone blank. Empty email and LinkedIn fields display honest coming-soon placeholders; a blank phone field stays hidden.
+
+## This update
+
+Includes the larger labels from the previous update, a fifth Contact arrow, blended Contact section, and abstract animated motifs: stars, leaves, silver streaks, drifting clouds, and soft signal rings. Motion Off and reduced-motion preferences disable animation.
+
+The homepage character image has been removed. Delete the old assets/jojo-cast.webp file in GitHub if you want to clean it up; it is no longer referenced. The project dialog no longer displays a note about missing external links.
+
+## Updating your existing GitHub repository
+
+Upload index.html, style.css, script.js, projects.js, contact.js, and README.md to the repository root. Keep the existing assets folder and any real project photos you added. The included assets folder contains only the ornate arrow and photo instructions; it will not overwrite your real project photos.
+
+Stand names remain as section titles; no Stand character illustrations are used. All animated effects are CSS shapes.
