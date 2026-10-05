@@ -26,16 +26,11 @@ Use those exact lowercase names. Your image will show both on its project card a
 
 For PNG or other filenames, edit the image path in projects.js AND the matching project-photo src in index.html.
 
-## Edit project content and Stand pairings
+## Edit project content
 
-projects.js contains the detail-view titles, descriptions, tags, image paths, and Stand pairings. Edit the corresponding project card in index.html to keep its short preview consistent.
+projects.js contains the detail-view titles, descriptions, tags, and image paths. Edit the corresponding project card in index.html to keep its short preview consistent.
 
-Current pairings:
-- Solar energy system: Gold Experience
-- Combat robot: Silver Chariot
-- Experimental test bench: Crazy Diamond
-
-Section illustrations: Star Platinum (About), Gold Experience (Projects), Silver Chariot (Experience), Weather Report (Skills).
+This version uses blended color profiles and decorative motifs, with no Stand character illustrations. Section names remain Star Platinum, Gold Experience, Silver Chariot, and Weather Report.
 
 ## Files
 
@@ -43,7 +38,6 @@ Section illustrations: Star Platinum (About), Gold Experience (Projects), Silver
 - style.css: responsive layout, blended backgrounds, and visual effects
 - projects.js: editable project detail data
 - script.js: navigation effects, weather controls, and project windows
-- assets/stands/: generated Stand illustrations
 - assets/projects/: your real project photos
 - assets/jojo-cast.webp: supplied reference artwork used on the opening screen
 - assets/stand-arrow.png: supplied ornate Stand Arrow asset
@@ -54,7 +48,7 @@ Double-click index.html to view locally. Everything uses relative paths so it wo
 
 ## Artwork
 
-The Stand illustrations are AI-generated interpretations, not official character renders. The cast and arrow assets were adapted from your supplied references. JoJo's Bizarre Adventure and its characters belong to their respective creators.
+The opening-screen cast and arrow assets were adapted from your supplied references. JoJo's Bizarre Adventure and its characters belong to their respective creators.
 
 ## Validation
 
