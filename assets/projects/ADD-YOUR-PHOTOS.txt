@@ -1,0 +1,3 @@
+Add your real photos here: solar.jpg, combat.jpg, and bench.jpg.
+They automatically replace the card illustrations and fill the expanded project image views.
+See README.md for alternate filenames.
