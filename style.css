@@ -8,3 +8,30 @@
 /* Colors-only version: full-width layouts without character artwork. */
 .section-title{padding-right:0;min-height:0}.experience-title{padding-right:0;min-height:0}.skills h2{max-width:100%}#skill-display{margin-right:0}.precision-art .bigstar{opacity:1}.precision-art .ora{opacity:1}
 @media(max-width:600px){.section-title{padding-right:0;min-height:0}.experience-title{padding-right:0;min-height:0}.skills h2{max-width:100%}}
+
+/* Larger supporting labels and ability text. */
+.eyebrow,.chapter .eyebrow{font-size:18px;line-height:1.4;letter-spacing:1.8px}
+.ability{font-size:15px;line-height:1.4;padding:11px 17px;letter-spacing:1.4px}
+.stats{gap:20px;row-gap:24px}
+.stats small{font-size:14px;font-weight:700;letter-spacing:1px;line-height:1.4;margin-bottom:10px}
+.stats strong{font-size:18px;line-height:1.5;display:block}
+.art-caption{font-size:14px;line-height:1.6;letter-spacing:1.2px;left:20px;right:20px;bottom:20px}
+.chapter-head{font-size:14px;line-height:1.5}.chapter-head a{font-size:13px}
+.project-no,.image-caption{font-size:13px;line-height:1.4;letter-spacing:1px}
+.project-text small{font-size:13px;line-height:1.5;font-weight:700}
+.roles article span{font-size:13px;line-height:1.5;font-weight:700}
+.weather-buttons button{font-size:14px;line-height:1.4}
+#skill-kicker{font-size:14px;line-height:1.5;letter-spacing:1.2px}
+.modal-tags{font-size:14px;line-height:1.6}
+@media(max-width:900px){.roles article{grid-template-columns:135px 1fr}}
+@media(max-width:600px){
+ .eyebrow,.chapter .eyebrow{font-size:16px;letter-spacing:1.2px}
+ .ability{font-size:14px}
+ .stats{grid-template-columns:1fr;gap:18px}
+ .stats small{font-size:13px;margin-bottom:5px}
+ .stats strong{font-size:18px}
+ .art-caption{font-size:12px;letter-spacing:.6px}
+ .chapter-head{font-size:12px;gap:15px}.chapter-head a{font-size:11px}
+ .weather-buttons button{font-size:12px;padding:12px}
+ #skill-kicker{font-size:12px}
+}
