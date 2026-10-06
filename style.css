@@ -58,3 +58,12 @@ body.no-motion .ambient i{animation:none!important;opacity:.25}body.no-motion .c
 #modal-image-fallback {
   display: none;
 }
+#modal-bullets {
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#modal-bullets li {
+  margin-bottom: 16px;
+}
