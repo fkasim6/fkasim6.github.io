@@ -55,3 +55,6 @@
 body.no-motion .ambient i{animation:none!important;opacity:.25}body.no-motion .clouds i{left:calc(-10% + var(--i)*25%)}
 @media(prefers-reduced-motion:reduce){.ambient i{animation:none!important;opacity:.25}.clouds i{left:calc(-10% + var(--i)*25%)}}
 @media(max-width:600px){.hero{min-height:1030px}.hero-art{height:370px;opacity:.3}.emblem-star{font-size:320px}.emblem-caption{font-size:11px;bottom:12%}.contact-link,.contact-placeholder{grid-template-columns:1fr 25px;gap:12px}.contact-links span{grid-column:1/-1}.contact-links strong{font-size:22px}.contact-links b{grid-column:2}.clouds i{width:280px;height:100px}.contact-intro{font-size:16px!important}}
+#modal-image-fallback {
+  display: none;
+}
