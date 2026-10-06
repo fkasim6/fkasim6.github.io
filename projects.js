@@ -24,7 +24,13 @@ const PORTFOLIO_PROJECTS = {
   bench: {
     kicker: '03 / ENGINEERING RESEARCH',
     title: 'Experimental test bench',
-    description: 'Designed a T-frame and 3D-printed mounts to support valves, mass flow controllers, pipes, and other experimental components. Also developed an electrical enclosure for Arduinos and the voltage supply. Using printed parts made changes easier as the experiment evolved.',
+    description: 'Supported the development of an airflow preconditioning test bench for thermal energy storage research at Georgia Tech’s Water-Energy Research Laboratory.',
+    bullets: [
+      ['Frame & Tubing Organization', 'Designed 3D-printed mounts that slide into T-slot framing to organize the dry and humid air lines and support a compact layout.'],
+      ['Component Mounting', 'Measured mass flow controllers with calipers and designed holders to secure them while keeping components accessible.'],
+      ['Valve & Sensor Supports', 'Developed valve holders that allow operation without twisting connected tubing, along with clamps to protect fragile humidity sensors and secure their wiring.'],
+      ['Design Iteration', 'Refined supports as system components changed and developed a preliminary exhaust valve mount to support future testing.']
+    ],
     tags: 'RESEARCH / ADDITIVE MANUFACTURING / HARDWARE FIXTURES',
     image: 'assets/projects/bench.jpg',
   }

@@ -1,7 +1,6 @@
-// Fill in your details below. Leave a field blank to keep it unavailable.
-// Example LinkedIn format: https://www.linkedin.com/in/your-profile/
+// Contact links used by the Contact section.
 const PORTFOLIO_CONTACT = {
-  email: '',
-  linkedin: '',
-  phone: '' // Optional. Hidden when blank.
+  email: 'faysalkasim10@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/faysalkasim',
+  phone: ''
 };
