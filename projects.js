@@ -12,6 +12,13 @@ const PORTFOLIO_PROJECTS = {
     kicker: '02 / COMBAT ROBOTICS',
     title: '3 lb combat robot',
     description: 'As lead chassis designer for a RoboJackets hammer saw robot, I work on the chassis and weapon assembly while considering armor, electronics space, wheel clearance, and drivetrain integration. The project connects CAD design with the practical constraints of a compact competition robot.',
+    description: 'A collaborative build of a 3 lb combat robot designed around weight limits, impact resistance, and a hammer saw weapon.',
+bullets: [
+  ['Chassis & Geometry (CAD)', 'Modeled the core tub and weapon assembly, separating curved armor panels from structural components to maximize internal space and simplify machining.'],
+  ['Electronics & Packaging', 'Designed wiring channels and internal mounts for the battery, ESCs, and receiver.'],
+  ['Assembly & Drive Tuning', 'Built the drivetrain and weapon systems, adjusting belt tension and mechanical clearances.'],
+  ['Arena Performance', 'Competed in April, passed technical inspection, and finished with a 1–2 record across three bouts.']
+],
     tags: 'SOLIDWORKS / CHASSIS DESIGN / MECHANICAL INTEGRATION',
     image: 'assets/projects/combat.jpg',
   },
