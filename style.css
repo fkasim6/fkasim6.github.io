@@ -67,3 +67,9 @@ body.no-motion .ambient i{animation:none!important;opacity:.25}body.no-motion .c
 #modal-bullets li {
   margin-bottom: 16px;
 }
+/* No empty picture panel when a project photo is unavailable. */
+.project-detail-media[hidden]{display:none}
+.project-detail-layout.no-project-image{grid-template-columns:1fr}
+#modal-bullets{padding-left:24px;font-size:16px;line-height:1.75;margin:20px 0}
+#modal-bullets li{padding-left:4px;margin-bottom:18px}
+#modal-bullets strong{font-weight:700}
